@@ -15,7 +15,7 @@
         header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0.8rem 1.5rem; }
         .logo-container { display: flex; align-items: center; gap: 10px; }
-        .logo-img { height: 45px; width: auto; object-fit: contain; }
+        .logo-img { height: 50px; width: auto; object-fit: contain; }
         .logo-text { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-decoration: none; }
         .logo-text span { color: var(--dark); }
         .nav-links { display: flex; gap: 1.5rem; align-items: center; }
@@ -50,11 +50,11 @@
         .service-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--dark); }
         .service-content p { color: #64748b; font-size: 0.95rem; margin-bottom: 1rem; }
 
-        /* Media / Visiting Card Section */
+        /* Visiting Card & Catalogue Showcase */
         .media-section { background: var(--light); border-radius: 12px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
-        .visiting-card-img { max-width: 100%; max-height: 350px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-top: 1rem; }
+        .visiting-card-img { max-width: 100%; max-height: 400px; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); margin-top: 1.5rem; }
 
-        /* Booking / Contact Form */
+        /* Contact & Booking */
         .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; background: var(--light); padding: 2.5rem; border-radius: 12px; }
         .contact-info h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; }
         .info-item { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; font-size: 1rem; }
@@ -64,11 +64,11 @@
         .booking-form input, .booking-form select, .booking-form textarea { padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; outline: none; font-size: 0.95rem; }
         .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus { border-color: var(--primary); }
 
-        /* Social Links & Footer */
+        /* Footer */
         footer { background: var(--dark); color: #cbd5e1; text-align: center; padding: 3rem 1.5rem 1.5rem; margin-top: 4rem; }
         .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
         .social-links a { color: #fff; font-size: 1.5rem; transition: 0.3s; background: rgba(255,255,255,0.1); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; }
-        .social-links a:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+        .social-links a:hover { background: var(--primary); transform: translateY(-3px); }
         footer p { font-size: 0.9rem; border-top: 1px solid #334155; padding-top: 1.5rem; }
     </style>
 </head>
@@ -78,7 +78,6 @@
     <header>
         <nav>
             <div class="logo-container">
-                <!-- Replace logo.png with your uploaded logo filename -->
                 <img src="logo.png" alt="Fixwale Logo" class="logo-img" onerror="this.style.display='none'">
                 <a href="#" class="logo-text">Fix<span>wale</span></a>
             </div>
@@ -86,54 +85,64 @@
                 <a href="#services">Services</a>
                 <a href="#card">Visiting Card</a>
                 <a href="#book">Book Now</a>
-                <a href="catalogue.pdf" class="btn btn-primary" style="padding: 0.5rem 1rem;" target="_blank"><i class="fa-solid fa-file-pdf"></i> Catalogue</a>
+                <a href="catalogue.pdf" class="btn btn-primary" style="padding: 0.5rem 1rem;" target="_blank"><i class="fa-solid fa-file-pdf"></i> Download Catalogue</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Banner -->
     <section class="hero">
-        <h1>Complete Home & Security Solutions</h1>
-        <p>Expert Installation, Repair & Maintenance for CCTV, Access Control, Fire Alarms, Appliances & Pest Control.</p>
+        <h1>Complete Security & Appliance Repair Solutions</h1>
+        <p>Expert Installation & Service for CCTV, Access Control, Fire Alarms, Pest Control & Home Appliances in Navi Mumbai.</p>
         <div class="hero-btns">
-            <a href="https://wa.me/919876543210?text=Hello%20Fixwale,%20I%20want%20to%20book%20a%20service." class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Booking</a>
-            <a href="tel:+919876543210" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call +91 98765 43210</a>
+            <a href="https://wa.me/918655036517?text=Hello%20Fixwale,%20I%20want%20to%20book%20a%20service." class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
+            <a href="tel:+918655036517" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call 8655036517</a>
         </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- Services Section -->
     <div class="container" id="services">
-        <h2 class="section-title">Our Professional Services</h2>
-        <p class="section-subtitle">Doorstep services delivered by certified technicians</p>
+        <h2 class="section-title">Our Services Catalogue</h2>
+        <p class="section-subtitle">Professional doorstep service across Navi Mumbai</p>
         
         <div class="services-grid">
-            <!-- CCTV & Security -->
+            <!-- CCTV -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" alt="CCTV Surveillance" class="service-img">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" alt="CCTV Security" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-video service-icon"></i>
                     <h3>CCTV & Security Systems</h3>
-                    <p>HD/IP CCTV camera setup, night-vision installation, live monitoring setup & routine maintenance.</p>
+                    <p>IP & HD camera installation, night vision cameras, live phone setup & DVR maintenance.</p>
                 </div>
             </div>
 
-            <!-- Access Control Systems -->
+            <!-- Access Control -->
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="Access Control" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-fingerprint service-icon"></i>
                     <h3>Access Control Systems</h3>
-                    <p>Biometric locks, RFID card readers, video door phones & smart digital door locks for home and office.</p>
+                    <p>Biometric attendance locks, RFID card entry, video door phones & digital smart locks.</p>
                 </div>
             </div>
 
-            <!-- Fire Alarm Systems -->
+            <!-- Fire Alarm -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="Fire Alarm Systems" class="service-img">
+                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="Fire Safety" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-fire-extinguisher service-icon"></i>
                     <h3>Fire Alarm & Safety</h3>
-                    <p>Smoke detector installation, heat sensors, fire panel maintenance & safety compliance setup.</p>
+                    <p>Smoke detectors, heat sensors, fire control panels & periodic safety inspections.</p>
+                </div>
+            </div>
+
+            <!-- Pest Control -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=600&q=80" alt="Pest Control" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-bug service-icon"></i>
+                    <h3>Pest Control Services</h3>
+                    <p>Odorless treatment for termites, cockroaches, rodents, bed bugs & general disinfection.</p>
                 </div>
             </div>
 
@@ -143,27 +152,17 @@
                 <div class="service-content">
                     <i class="fa-solid fa-plug service-icon"></i>
                     <h3>Home Appliance Repair</h3>
-                    <p>Expert repair for ACs, Refrigerators, Washing Machines, Microwave Ovens & TVs.</p>
+                    <p>AC servicing, Refrigerator cooling repair, Washing Machine repairs & Microwave servicing.</p>
                 </div>
             </div>
 
-            <!-- Pest Control Services -->
+            <!-- Electrical Works -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=600&q=80" alt="Pest Control" class="service-img">
-                <div class="service-content">
-                    <i class="fa-solid fa-bug service-icon"></i>
-                    <h3>Pest Control Services</h3>
-                    <p>Eco-friendly treatment for termites, cockroaches, rodents, bed bugs, and general disinfection.</p>
-                </div>
-            </div>
-
-            <!-- General Repair & Maintenance -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electrical Work" class="service-img">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electrical Repairs" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
-                    <h3>Electrical & Maintenance</h3>
-                    <p>Complete building wiring, inverter installation, circuit breaker replacement & general fixes.</p>
+                    <h3>Electrical & Wiring</h3>
+                    <p>Full building wiring, short-circuit repairs, inverter setup & electrical panel maintenance.</p>
                 </div>
             </div>
         </div>
@@ -171,31 +170,26 @@
         <!-- Digital Visiting Card Showcase -->
         <div class="media-section" id="card">
             <h2 class="section-title">Digital Visiting Card</h2>
-            <p>Save or share our contact details directly</p>
-            <!-- Replace visiting-card.png with your uploaded visiting card file name -->
-            <img src="visiting-card.png" alt="Fixwale Digital Visiting Card" class="visiting-card-img" onerror="this.src='https://via.placeholder.com/500x300?text=Upload+Visiting+Card+Image'">
+            <p>Save or share our direct business card</p>
+            <img src="visiting-card.jpg" alt="Fixwale Digital Visiting Card" class="visiting-card-img" onerror="this.src='https://via.placeholder.com/500x300?text=Upload+visiting-card.jpg+file'">
         </div>
     </div>
 
     <!-- Booking & Contact Section -->
     <div class="container" id="book">
-        <h2 class="section-title">Book Service or Request Quote</h2>
-        <p class="section-subtitle">Fill out the quick form below or call us directly</p>
+        <h2 class="section-title">Book Service / Request Quote</h2>
+        <p class="section-subtitle">Reach out directly via call or WhatsApp</p>
 
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Get in Touch</h3>
+                <h3>Contact Details</h3>
                 <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>+91 98765 43210</span>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>support@fixwale.in</span>
+                    <span>+91 8655036517</span>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>Keonjhar, Odisha & Surrounding Areas</span>
+                    <span>Mukta Residency, Padale, Navi Mumbai</span>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-clock"></i>
@@ -203,7 +197,7 @@
                 </div>
             </div>
 
-            <!-- Booking Form (Submits to WhatsApp) -->
+            <!-- WhatsApp Direct Booking Form -->
             <form class="booking-form" onsubmit="submitToWhatsApp(event)">
                 <input type="text" id="custName" placeholder="Your Name" required>
                 <input type="tel" id="custPhone" placeholder="Mobile Number" required>
@@ -212,25 +206,18 @@
                     <option value="CCTV & Security">CCTV & Security Systems</option>
                     <option value="Access Control">Access Control Systems</option>
                     <option value="Fire Alarm">Fire Alarm & Safety</option>
-                    <option value="Home Appliances">Home Appliance Repair</option>
                     <option value="Pest Control">Pest Control Services</option>
-                    <option value="Electrical Repair">Electrical & Maintenance</option>
+                    <option value="Home Appliances">Home Appliance Repair</option>
+                    <option value="Electrical Repair">Electrical Wiring & Repairs</option>
                 </select>
-                <textarea id="custMsg" rows="3" placeholder="Describe issue or requirements..."></textarea>
+                <textarea id="custMsg" rows="3" placeholder="Requirement details or location address..."></textarea>
                 <button type="submit" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Send Booking via WhatsApp</button>
             </form>
         </div>
     </div>
 
-    <!-- Footer & Social Links -->
+    <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
         <p>&copy; 2026 Fixwale (fixwale.in). All Rights Reserved.</p>
     </footer>
 
@@ -242,8 +229,8 @@
             const service = document.getElementById('serviceType').value;
             const msg = document.getElementById('custMsg').value;
             
-            const waMsg = `Hello Fixwale, I would like to book a service.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Details:* ${msg}`;
-            window.open(`https://wa.me/919876543210?text=${waMsg}`, '_blank');
+            const waMsg = `Hello Fixwale, I want to book a service.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Details:* ${msg}`;
+            window.open(`https://wa.me/918655036517?text=${waMsg}`, '_blank');
         }
     </script>
 </body>
