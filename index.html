@@ -3,108 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixwale - Professional Home Appliance & Repair Services</title>
+    <title>Fixwale - Total Home & Commercial Security, Appliance & Repair Solutions</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Modern Reset & Colors */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        :root { --primary: #0056b3; --accent: #25D366; --dark: #222; --light: #f4f6f9; }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+        :root { --primary: #0056b3; --accent: #25D366; --dark: #1e293b; --light: #f8fafc; }
         body { color: var(--dark); line-height: 1.6; background-color: #fff; }
-        
-        /* Navigation Bar */
-        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 1rem; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
-        .logo span { color: var(--dark); }
-        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; font-weight: 500; }
-        
+
+        /* Navigation */
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0.8rem 1.5rem; }
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo-img { height: 45px; width: auto; object-fit: contain; }
+        .logo-text { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo-text span { color: var(--dark); }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+
         /* Hero Section */
-        .hero { background: linear-gradient(rgba(0,86,179,0.85), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; text-align: center; padding: 4rem 1rem; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; }
-        
-        /* Call to Action Buttons */
-        .btn { display: inline-block; padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; margin: 0.3rem; }
-        .btn-primary { background: var(--accent); color: white; }
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; text-align: center; padding: 5rem 1.5rem; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; font-weight: 800; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; color: #e2e8f0; }
+        .hero-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: 700; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-whatsapp { background: var(--accent); color: white; }
+        .btn-primary { background: var(--primary); color: white; }
         .btn-secondary { background: white; color: var(--primary); }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn:hover { transform: translateY(-2px); opacity: 0.95; }
 
-        /* Container & Sections */
-        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1rem; }
-        .section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: var(--primary); }
-        
+        /* Section Layouts */
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--primary); font-weight: 800; }
+        .section-subtitle { text-align: center; color: #64748b; margin-bottom: 3rem; font-size: 1.05rem; }
+
         /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-        .service-card { background: var(--light); padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #e0e0e0; }
-        .service-card h3 { margin-bottom: 0.5rem; color: var(--primary); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .service-img { width: 100%; height: 180px; object-fit: cover; }
+        .service-content { padding: 1.5rem; }
+        .service-icon { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .service-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--dark); }
+        .service-content p { color: #64748b; font-size: 0.95rem; margin-bottom: 1rem; }
 
-        /* Contact Section */
-        .contact-box { background: var(--light); padding: 2rem; border-radius: 8px; text-align: center; }
-        .phone-link { font-size: 1.4rem; color: var(--primary); font-weight: bold; text-decoration: none; display: block; margin: 1rem 0; }
+        /* Media / Visiting Card Section */
+        .media-section { background: var(--light); border-radius: 12px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
+        .visiting-card-img { max-width: 100%; max-height: 350px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-top: 1rem; }
 
-        /* Footer */
-        footer { background: var(--dark); color: #fff; text-align: center; padding: 1.5rem 0; margin-top: 2rem; font-size: 0.9rem; }
+        /* Booking / Contact Form */
+        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; background: var(--light); padding: 2.5rem; border-radius: 12px; }
+        .contact-info h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .info-item { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; font-size: 1rem; }
+        .info-item i { color: var(--primary); font-size: 1.2rem; }
+        
+        .booking-form { display: flex; flex-direction: column; gap: 1rem; background: #fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .booking-form input, .booking-form select, .booking-form textarea { padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; outline: none; font-size: 0.95rem; }
+        .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus { border-color: var(--primary); }
+
+        /* Social Links & Footer */
+        footer { background: var(--dark); color: #cbd5e1; text-align: center; padding: 3rem 1.5rem 1.5rem; margin-top: 4rem; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .social-links a { color: #fff; font-size: 1.5rem; transition: 0.3s; background: rgba(255,255,255,0.1); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; }
+        .social-links a:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+        footer p { font-size: 0.9rem; border-top: 1px solid #334155; padding-top: 1.5rem; }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header>
         <nav>
-            <div class="logo">Fix<span>wale</span></div>
+            <div class="logo-container">
+                <!-- Replace logo.png with your uploaded logo filename -->
+                <img src="logo.png" alt="Fixwale Logo" class="logo-img" onerror="this.style.display='none'">
+                <a href="#" class="logo-text">Fix<span>wale</span></a>
+            </div>
             <div class="nav-links">
                 <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <a href="#card">Visiting Card</a>
+                <a href="#book">Book Now</a>
+                <a href="catalogue.pdf" class="btn btn-primary" style="padding: 0.5rem 1rem;" target="_blank"><i class="fa-solid fa-file-pdf"></i> Catalogue</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Banner -->
     <section class="hero">
-        <h1>Reliable Home Appliance & Repair Services</h1>
-        <p>Fast, expert, and affordable repair solutions right at your doorstep.</p>
-        <a href="https://wa.me/919876543210?text=Hello%20Fixwale,%20I%20need%20help%20with%20a%20repair." class="btn btn-primary" target="_blank">Book via WhatsApp</a>
-        <a href="tel:+919876543210" class="btn btn-secondary">Call Now</a>
+        <h1>Complete Home & Security Solutions</h1>
+        <p>Expert Installation, Repair & Maintenance for CCTV, Access Control, Fire Alarms, Appliances & Pest Control.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/919876543210?text=Hello%20Fixwale,%20I%20want%20to%20book%20a%20service." class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Booking</a>
+            <a href="tel:+919876543210" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call +91 98765 43210</a>
+        </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Grid -->
     <div class="container" id="services">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title">Our Professional Services</h2>
+        <p class="section-subtitle">Doorstep services delivered by certified technicians</p>
+        
         <div class="services-grid">
+            <!-- CCTV & Security -->
             <div class="service-card">
-                <h3>AC Repair & Service</h3>
-                <p>Installation, cooling issues, gas refilling, and regular maintenance.</p>
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" alt="CCTV Surveillance" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-video service-icon"></i>
+                    <h3>CCTV & Security Systems</h3>
+                    <p>HD/IP CCTV camera setup, night-vision installation, live monitoring setup & routine maintenance.</p>
+                </div>
             </div>
+
+            <!-- Access Control Systems -->
             <div class="service-card">
-                <h3>Refrigerator Repair</h3>
-                <p>Fixing cooling failure, compressor issues, and electrical faults.</p>
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="Access Control" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-fingerprint service-icon"></i>
+                    <h3>Access Control Systems</h3>
+                    <p>Biometric locks, RFID card readers, video door phones & smart digital door locks for home and office.</p>
+                </div>
             </div>
+
+            <!-- Fire Alarm Systems -->
             <div class="service-card">
-                <h3>Washing Machine Repair</h3>
-                <p>Solutions for drainage, drum, motor, and electronic display errors.</p>
+                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="Fire Alarm Systems" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-fire-extinguisher service-icon"></i>
+                    <h3>Fire Alarm & Safety</h3>
+                    <p>Smoke detector installation, heat sensors, fire panel maintenance & safety compliance setup.</p>
+                </div>
             </div>
+
+            <!-- Home Appliances -->
             <div class="service-card">
-                <h3>General Electronics</h3>
-                <p>TVs, induction stoves, microwave ovens, and home wiring solutions.</p>
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Home Appliances" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-plug service-icon"></i>
+                    <h3>Home Appliance Repair</h3>
+                    <p>Expert repair for ACs, Refrigerators, Washing Machines, Microwave Ovens & TVs.</p>
+                </div>
             </div>
+
+            <!-- Pest Control Services -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=600&q=80" alt="Pest Control" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-bug service-icon"></i>
+                    <h3>Pest Control Services</h3>
+                    <p>Eco-friendly treatment for termites, cockroaches, rodents, bed bugs, and general disinfection.</p>
+                </div>
+            </div>
+
+            <!-- General Repair & Maintenance -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electrical Work" class="service-img">
+                <div class="service-content">
+                    <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
+                    <h3>Electrical & Maintenance</h3>
+                    <p>Complete building wiring, inverter installation, circuit breaker replacement & general fixes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Digital Visiting Card Showcase -->
+        <div class="media-section" id="card">
+            <h2 class="section-title">Digital Visiting Card</h2>
+            <p>Save or share our contact details directly</p>
+            <!-- Replace visiting-card.png with your uploaded visiting card file name -->
+            <img src="visiting-card.png" alt="Fixwale Digital Visiting Card" class="visiting-card-img" onerror="this.src='https://via.placeholder.com/500x300?text=Upload+Visiting+Card+Image'">
         </div>
     </div>
 
-    <!-- Contact & Booking Section -->
-    <div class="container" id="contact">
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="contact-box">
-            <p>Need urgent repair or want to schedule an inspection?</p>
-            <a href="tel:+919876543210" class="phone-link">📞 +91 98765 43210</a>
-            <p><strong>Working Hours:</strong> Monday – Saturday: 9:00 AM – 8:00 PM</p>
-            <p><strong>Service Location:</strong> Keonjhar & Nearby Areas</p>
+    <!-- Booking & Contact Section -->
+    <div class="container" id="book">
+        <h2 class="section-title">Book Service or Request Quote</h2>
+        <p class="section-subtitle">Fill out the quick form below or call us directly</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>support@fixwale.in</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Keonjhar, Odisha & Surrounding Areas</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+                </div>
+            </div>
+
+            <!-- Booking Form (Submits to WhatsApp) -->
+            <form class="booking-form" onsubmit="submitToWhatsApp(event)">
+                <input type="text" id="custName" placeholder="Your Name" required>
+                <input type="tel" id="custPhone" placeholder="Mobile Number" required>
+                <select id="serviceType" required>
+                    <option value="">Select Service Needed</option>
+                    <option value="CCTV & Security">CCTV & Security Systems</option>
+                    <option value="Access Control">Access Control Systems</option>
+                    <option value="Fire Alarm">Fire Alarm & Safety</option>
+                    <option value="Home Appliances">Home Appliance Repair</option>
+                    <option value="Pest Control">Pest Control Services</option>
+                    <option value="Electrical Repair">Electrical & Maintenance</option>
+                </select>
+                <textarea id="custMsg" rows="3" placeholder="Describe issue or requirements..."></textarea>
+                <button type="submit" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Send Booking via WhatsApp</button>
+            </form>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer & Social Links -->
     <footer>
-        <p>&copy; 2026 Fixwale. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2026 Fixwale (fixwale.in). All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function submitToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const service = document.getElementById('serviceType').value;
+            const msg = document.getElementById('custMsg').value;
+            
+            const waMsg = `Hello Fixwale, I would like to book a service.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Details:* ${msg}`;
+            window.open(`https://wa.me/919876543210?text=${waMsg}`, '_blank');
+        }
+    </script>
 </body>
 </html>
