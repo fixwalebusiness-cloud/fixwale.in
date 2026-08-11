@@ -50,11 +50,11 @@
         .service-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--dark); }
         .service-content p { color: #64748b; font-size: 0.95rem; margin-bottom: 1rem; }
 
-        /* Visiting Card & Catalogue Showcase */
+        /* Media Section */
         .media-section { background: var(--light); border-radius: 12px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
-        .visiting-card-img { max-width: 100%; max-height: 400px; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); margin-top: 1.5rem; }
+        .showcase-img { max-width: 100%; max-height: 450px; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); margin-top: 1.5rem; }
 
-        /* Contact & Booking */
+        /* Contact Section */
         .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; background: var(--light); padding: 2.5rem; border-radius: 12px; }
         .contact-info h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; }
         .info-item { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; font-size: 1rem; }
@@ -66,57 +66,52 @@
 
         /* Footer */
         footer { background: var(--dark); color: #cbd5e1; text-align: center; padding: 3rem 1.5rem 1.5rem; margin-top: 4rem; }
-        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
-        .social-links a { color: #fff; font-size: 1.5rem; transition: 0.3s; background: rgba(255,255,255,0.1); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; }
-        .social-links a:hover { background: var(--primary); transform: translateY(-3px); }
         footer p { font-size: 0.9rem; border-top: 1px solid #334155; padding-top: 1.5rem; }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Navigation Header -->
     <header>
         <nav>
             <div class="logo-container">
-                <img src="logo.png" alt="Fixwale Logo" class="logo-img" onerror="this.style.display='none'">
-                <a href="#" class="logo-text">Fix<span>wale</span></a>
+                <img src="logo.jpeg" alt="Fixwale Logo" class="logo-img">
+                <a href="#" class="logo-text">Fix<span>Wale</span></a>
             </div>
             <div class="nav-links">
                 <a href="#services">Services</a>
+                <a href="#catalogue">Catalogue</a>
                 <a href="#card">Visiting Card</a>
                 <a href="#book">Book Now</a>
-                <a href="catalogue.pdf" class="btn btn-primary" style="padding: 0.5rem 1rem;" target="_blank"><i class="fa-solid fa-file-pdf"></i> Download Catalogue</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Banner -->
     <section class="hero">
-        <h1>Complete Security & Appliance Repair Solutions</h1>
-        <p>Expert Installation & Service for CCTV, Access Control, Fire Alarms, Pest Control & Home Appliances in Navi Mumbai.</p>
+        <h1>Trusted Partners. Trusted Solutions.</h1>
+        <p>Complete Security Systems, Access Control, Fire Alarms, Appliances & Pest Control Repairs across Navi Mumbai.</p>
         <div class="hero-btns">
             <a href="https://wa.me/918655036517?text=Hello%20Fixwale,%20I%20want%20to%20book%20a%20service." class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-            <a href="tel:+918655036517" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call 8655036517</a>
+            <a href="tel:+918655036517" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call +91 86550 36517</a>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Grid -->
     <div class="container" id="services">
-        <h2 class="section-title">Our Services Catalogue</h2>
-        <p class="section-subtitle">Professional doorstep service across Navi Mumbai</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Repairs, Maintenance & Complete Engineering Solutions</p>
         
         <div class="services-grid">
-            <!-- CCTV -->
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" alt="CCTV Security" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-video service-icon"></i>
                     <h3>CCTV & Security Systems</h3>
-                    <p>IP & HD camera installation, night vision cameras, live phone setup & DVR maintenance.</p>
+                    <p>HD/IP CCTV cameras, night vision setup, mobile live monitoring & DVR maintenance.</p>
                 </div>
             </div>
 
-            <!-- Access Control -->
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="Access Control" class="service-img">
                 <div class="service-content">
@@ -126,52 +121,59 @@
                 </div>
             </div>
 
-            <!-- Fire Alarm -->
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="Fire Safety" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-fire-extinguisher service-icon"></i>
                     <h3>Fire Alarm & Safety</h3>
-                    <p>Smoke detectors, heat sensors, fire control panels & periodic safety inspections.</p>
+                    <p>Smoke detectors, heat sensors, fire control panels & safety compliance checks.</p>
                 </div>
             </div>
 
-            <!-- Pest Control -->
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=600&q=80" alt="Pest Control" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-bug service-icon"></i>
                     <h3>Pest Control Services</h3>
-                    <p>Odorless treatment for termites, cockroaches, rodents, bed bugs & general disinfection.</p>
+                    <p>Treatment for termites, cockroaches, rodents, bed bugs & general disinfection.</p>
                 </div>
             </div>
 
-            <!-- Home Appliances -->
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Home Appliances" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-plug service-icon"></i>
                     <h3>Home Appliance Repair</h3>
-                    <p>AC servicing, Refrigerator cooling repair, Washing Machine repairs & Microwave servicing.</p>
+                    <p>AC servicing, Refrigerator cooling repair, Washing Machines & Microwave repair.</p>
                 </div>
             </div>
 
-            <!-- Electrical Works -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electrical Repairs" class="service-img">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electrical Work" class="service-img">
                 <div class="service-content">
                     <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
                     <h3>Electrical & Wiring</h3>
-                    <p>Full building wiring, short-circuit repairs, inverter setup & electrical panel maintenance.</p>
+                    <p>Complete building wiring, short-circuit repairs, inverter setup & electrical panels.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Catalogue Showcase -->
+        <div class="media-section" id="catalogue">
+            <h2 class="section-title">Services Catalogue</h2>
+            <p>Explore our complete list of services and offers</p>
+            <a href="Catalogue.jpeg" target="_blank">
+                <img src="Catalogue.jpeg" alt="Fixwale Services Catalogue" class="showcase-img">
+            </a>
         </div>
 
         <!-- Digital Visiting Card Showcase -->
         <div class="media-section" id="card">
             <h2 class="section-title">Digital Visiting Card</h2>
-            <p>Save or share our direct business card</p>
-            <img src="visiting-card.jpg" alt="Fixwale Digital Visiting Card" class="visiting-card-img" onerror="this.src='https://via.placeholder.com/500x300?text=Upload+visiting-card.jpg+file'">
+            <p>Scan & Pay using PhonePe or save our contact details directly</p>
+            <a href="Digital visiting card.jpeg" target="_blank">
+                <img src="Digital visiting card.jpeg" alt="Fixwale Digital Visiting Card" class="showcase-img">
+            </a>
         </div>
     </div>
 
@@ -184,16 +186,20 @@
             <div class="contact-info">
                 <h3>Contact Details</h3>
                 <div class="info-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span><strong>Manoj Mehta</strong> (Founder & CEO)</span>
+                </div>
+                <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>+91 8655036517</span>
+                    <span>+91 86550 36517</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>manoj.mehta@fixwale.in</span>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>Mukta Residency, Padale, Navi Mumbai</span>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+                    <span>Navi Mumbai, Maharashtra, India - 400708</span>
                 </div>
             </div>
 
@@ -218,7 +224,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Fixwale (fixwale.in). All Rights Reserved.</p>
+        <p>&copy; 2026 Fixwale (fixwale.in). One Platform. Endless Solutions.</p>
     </footer>
 
     <script>
